@@ -1,2 +1,0 @@
-D:\C++\3semA3\Debug\3semA3.pdb
-D:\C++\3semA3\Debug\3semA3.lib

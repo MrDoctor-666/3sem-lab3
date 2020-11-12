@@ -35,7 +35,12 @@ void BinaryHeap::siftDown(int elem) {
 }
 
 void BinaryHeap::insert(int info) {
-	if (size_heap == max_size) throw std::out_of_range("Heap is full");
+	if (size_heap == max_size) {
+		int* h_new = new int[max_size * 10];
+		for (int i = 0; i < size_heap; i++) h_new[i] = h[i];
+		delete h; h = h_new;
+		max_size *= 10;
+	}
 	h[size_heap] = info;
 	size_heap++;
 	siftUp(size_heap - 1);
